@@ -2,12 +2,22 @@
  * This is a class that tests the Card class.
  */
 public class CardTester {
-
-    /**
-     * The main method in this class checks the Card operations for consistency.
-     *	@param args is not used.
-     */
     public static void main(String[] args) {
-        /* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+
+        /*
+        ACTIVITY 1
+         */
+        //create three objects
+        Card a = new Card("Jack", "Hearts", 11);
+        Card b = new Card("Queen", "Spades", 12);
+        Card c = new Card("Ace", "Clubs", 1);
+
+        //print objects
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+
+
+
     }
 }
