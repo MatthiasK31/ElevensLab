@@ -1,6 +1,3 @@
-/**
- * This is a class that tests the Card class.
- */
 public class CardTester {
     public static void main(String[] args) {
         //create three objects

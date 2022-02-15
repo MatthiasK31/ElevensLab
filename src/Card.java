@@ -1,8 +1,3 @@
-/**
- * Card.java
- *
- * <code>Card</code> represents a playing card.
- */
 public class Card {
     //class variables
     private String suit;

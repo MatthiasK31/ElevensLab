@@ -1,6 +1,3 @@
-/**
- * This is a class that tests the Deck class.
- */
 public class DeckTester {
     public static void main(String[] args) {
         String [] rank = {"Ace", "Queen", "King"};
