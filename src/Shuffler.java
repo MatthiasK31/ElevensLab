@@ -1,11 +1,6 @@
 public class Shuffler {
     private static final int SHUFFLE_COUNT = 1;
 
-
-    /**
-     * Tests shuffling methods.
-     * @param args is not used.
-     */
     public static void main(String[] args) {
         System.out.println("Results of " + SHUFFLE_COUNT +
                 " consecutive perfect shuffles:");
@@ -42,8 +37,27 @@ public class Shuffler {
      * @param values is an array of integers simulating cards to be shuffled.
      */
     public static void perfectShuffle(int[] values) {
+        //create temp array and index for the middle pos
         int[] temp = new int[values.length];
-        int splitIndex = (values.length/2)-1;
+        int splitIndex = (values.length+1)/2;
+        int unshuffledPos = 0;
+        int traverser = 0;
+
+        //go through first half of array
+        int k = 0;
+        for ( ; k < splitIndex; k++) {
+            temp[unshuffledPos] = values[k];
+            unshuffledPos += 2;
+        }
+        unshuffledPos = 1;
+        for ( ; k < values.length; k++) {
+            temp[unshuffledPos] = values[k];
+            unshuffledPos += 2;
+        }
+
+        for (int i = 0; i < values.length; i++) {
+            values[traverser] = temp[traverser];
+        }
     }
 
     /**
@@ -58,6 +72,11 @@ public class Shuffler {
      * @param values is an array of integers simulating cards to be shuffled.
      */
     public static void selectionShuffle(int[] values) {
-        /* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+        for (int i = values.length-1; i >= 0 ; i--) {
+            int randomPos = (int)(Math.random() * (i +1));
+            int temp = values[randomPos];
+            values[randomPos] = values[i];
+            values[i] = temp;
+        }
     }
 }
